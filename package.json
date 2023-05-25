@@ -3,8 +3,20 @@
   "version": "1.0.0",
   "description": "Receives a Class and its another dependencies classes, and returns the instantiated class with the dependencies injected",
   "main": "index.js",
-  "keywords": ["dependency injection", "OOP", "dependency inversion"],
+  "keywords": [
+    "dependency injection",
+    "OOP",
+    "dependency inversion"
+  ],
   "author": "Thalysson Leite",
   "license": "ISC",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThalyssonLeite/dependencies-injector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThalyssonLeite/dependencies-injector/issues"
+  },
+  "homepage": "https://github.com/ThalyssonLeite/dependencies-injector#readme"
 }
