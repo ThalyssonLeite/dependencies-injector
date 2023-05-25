@@ -1,9 +1,8 @@
 ```typescript
-import { EquipmentsRepository } from './equipment.repository'
-import { OperatorsRepository } from './operators.repository'
-import { AuthenticateOperatorService } from './authenticate-operator.service'
+import { UsersRepository } from './users.repository'
+import { AuthenticateService } from './authenticate-operator.service'
 
 import { inject } from 'deps-injector'
 
-const authenticateOperatorService = inject(AuthenticateOperatorService, [OperatorsRepository, EquipmentsRepository])
+const authenticateService = inject(AuthenticateService, [UsersRepository])
 ```
