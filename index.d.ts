@@ -19,10 +19,7 @@ type InstanceToConstructor<A> = {
  *
  * import { inject } from 'deps-injector'
  *
- * export function AuthenticateOperatorServiceFactory() {
  * const authenticateOperatorService = inject(AuthenticateOperatorService, [OperatorsRepository, EquipmentsRepository])
- * 	return authenticateOperatorService
- * }
  * ```
  */
 
