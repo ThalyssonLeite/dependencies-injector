@@ -1,5 +1,5 @@
 {
-  "name": "inject-dependencies",
+  "name": "dependencies-injector",
   "version": "1.0.0",
   "description": "Receives a Class and its another dependencies classes, and returns the instantiated class with the dependencies injected",
   "main": "index.js",
