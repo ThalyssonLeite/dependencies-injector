@@ -1,4 +1,4 @@
-export function inject(Service, dependencies) {
+export function inject(service, dependencies) {
   const resolvedDependencies = dependencies.map((Dependency) => new Dependency());
-  return new Service(...resolvedDependencies);
+  return new service(...resolvedDependencies);
 }
