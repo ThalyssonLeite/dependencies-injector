@@ -1,0 +1,10 @@
+{
+  "name": "inject-dependencies",
+  "version": "1.0.0",
+  "description": "Receives a Class and its another dependencies classes, and returns the instantiated class with the dependencies injected",
+  "main": "index.js",
+  "keywords": ["dependency injection", "OOP", "dependency inversion"],
+  "author": "Thalysson Leite",
+  "license": "ISC",
+  "types": "./index.d.ts"
+}
