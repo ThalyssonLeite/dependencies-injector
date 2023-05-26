@@ -51,5 +51,5 @@ export declare function factory<T extends new (...args: ConstructorParameters<T>
 export declare function inject<T extends new (...args: ConstructorParameters<T>) => any>(
   service: T,
   dependencies: InstanceToConstructor<ConstructorParameters<T>>,
-): [InstanceType<T>, Parameters<T>]
+): [InstanceType<T>, ConstructorParameters<T>]
 
