@@ -1,7 +1,7 @@
 type InstanceToConstructor<A> = {
   [K in keyof A]: A[K] extends infer U
     ? U extends object
-      ? new (...args: any) => U | U
+      ? (new (...args: any) => U) | U
       : never
     : never;
 };
