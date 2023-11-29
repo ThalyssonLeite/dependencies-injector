@@ -1,11 +1,22 @@
-export function factory(service, dependencies) {
-  const resolvedDependencies = dependencies.map((Dependency) => new Dependency());
-	
-  return new service(...resolvedDependencies);
+function instanciate_dependencies(deps) {
+	return deps.map((Dep) => {
+		const is_class = Dep.hasOwnProperty("name")
+		if (is_class) return new Dep()
+		return Dep;
+	})
 }
 
-export function inject(service, dependencies) {
-  const resolvedDependencies = dependencies.map((Dependency) => new Dependency());
+function factory(service, dependencies) {
+	const resolvedDependencies = instanciate_dependencies(dependencies);
+	return new service(...resolvedDependencies);
+}
 
-  return [ new service(...resolvedDependencies), resolvedDependencies ];
+function inject(service, dependencies) {
+	const resolvedDependencies = instanciate_dependencies(dependencies);
+	return [new service(...resolvedDependencies), resolvedDependencies];
+}
+
+module.exports = {
+	factory,
+	inject
 }
