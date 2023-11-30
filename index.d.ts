@@ -18,13 +18,13 @@ type InstanceToConstructor<A> = {
  *
  * import { inject } from 'deps-injector'
  *
- * const authService = factory(AuthenticateService, [UsersRepository])
+ * const authService = factory(AuthenticateService, [UserRepository])
  * ```
  */
 
 export declare function factory<T extends new (...args: ConstructorParameters<T>) => any>(
   service: T,
-  ...dependencies: InstanceToConstructor<ConstructorParameters<T>>,
+  dependencies: InstanceToConstructor<ConstructorParameters<T>>,
 ): InstanceType<T>;
 
 /**
@@ -39,17 +39,15 @@ export declare function factory<T extends new (...args: ConstructorParameters<T>
  *
  * import { inject } from 'deps-injector'
  *
- * const [ authService, authServiceDeps ] = inject(AuthenticateService, [UsersRepository])
+ * const [ authService, [userRepo] ] = inject(AuthenticateService, [UserRepository])
  * 
  * const user = authService.execute({ name: 'john', email: 'john@gmail.com'})
- * const [ userRepository ] = authServiceDeps
- * 
- * await userRepository.deleteById(user.id)
+ * await userRepo.deleteById(user.id)
  * ```
  */
 
 export declare function inject<T extends new (...args: ConstructorParameters<T>) => any>(
   service: T,
-  ...dependencies: InstanceToConstructor<ConstructorParameters<T>>,
+  dependencies: InstanceToConstructor<ConstructorParameters<T>>,
 ): [InstanceType<T>, ConstructorParameters<T>]
 

@@ -1,7 +1,7 @@
 {
 	"name": "deps-injector",
-	"version": "1.5.6",
-	"description": "Both `factory` and `inject` methods receives a consumer/dependent class and an array of its dependencies classes and then instantiates the consumer/dependent class injecting the classes passed as dependencies.",
+	"version": "1.5.7",
+	"description": "Both `factory` and `inject` methods receives a consumer/dependent class and an array of its dependencies classes and then instantiates the consumer/dependent class injecting the classes/instances passed as dependencies.",
 	"main": "index.js",
 	"keywords": [
 		"dependency injection",
