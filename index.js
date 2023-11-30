@@ -6,12 +6,12 @@ function instanciate_dependencies(deps) {
 	})
 }
 
-function factory(service, dependencies) {
+function factory(service, ...dependencies) {
 	const resolvedDependencies = instanciate_dependencies(dependencies);
 	return new service(...resolvedDependencies);
 }
 
-function inject(service, dependencies) {
+function inject(service, ...dependencies) {
 	const resolvedDependencies = instanciate_dependencies(dependencies);
 	return [new service(...resolvedDependencies), resolvedDependencies];
 }

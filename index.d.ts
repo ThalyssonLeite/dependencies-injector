@@ -24,7 +24,7 @@ type InstanceToConstructor<A> = {
 
 export declare function factory<T extends new (...args: ConstructorParameters<T>) => any>(
   service: T,
-  dependencies: InstanceToConstructor<ConstructorParameters<T>>,
+  ...dependencies: InstanceToConstructor<ConstructorParameters<T>>,
 ): InstanceType<T>;
 
 /**
@@ -50,6 +50,6 @@ export declare function factory<T extends new (...args: ConstructorParameters<T>
 
 export declare function inject<T extends new (...args: ConstructorParameters<T>) => any>(
   service: T,
-  dependencies: InstanceToConstructor<ConstructorParameters<T>>,
+  ...dependencies: InstanceToConstructor<ConstructorParameters<T>>,
 ): [InstanceType<T>, ConstructorParameters<T>]
 
